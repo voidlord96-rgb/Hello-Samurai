@@ -1,0 +1,179 @@
+.contact {
+  background: url("../img/5_section.png") top/cover no-repeat;
+  height: 150vh;
+  padding-top: 146px;
+  overflow: hidden;
+}
+
+.contact__title {
+  color: var(--color-contacts-heading);
+  text-align: center;
+  margin-bottom: 146px;
+
+  opacity: 0;
+  transform: translateY(30px);
+
+  animation: contactTitleAppear 0.8s ease forwards;
+}
+
+.contact__title:hover {
+  animation:
+    contactTitleAppear 0.8s ease forwards,
+    contactTitleGlitch 0.3s ease;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.contact__group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 68px;
+
+  opacity: 0;
+  transform: translateY(30px);
+
+  animation: contactFieldAppear 0.7s ease forwards;
+  animation-delay: var(--delay);
+}
+
+.contact__label {
+  line-height: 65px;
+  font-size: 32px;
+  color: var(--color-accent-list);
+  width: 166px;
+  text-align: right;
+  margin-right: 20px;
+
+  transition:
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+.contact__group:focus-within .contact__label {
+  transform: translateX(-5px);
+  text-shadow: 0 0 10px currentColor;
+}
+
+.contact__input {
+  height: 65px;
+}
+
+.contact__input,
+.contact__textarea {
+  border: none;
+  outline: none;
+  width: 75%;
+  background-color: var(--color-input-bg);
+  padding-left: 28px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.contact__textarea {
+  padding-top: 25px;
+  resize: none;
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+  transform: scale(1.02);
+  background-color: var(--color-highlight);
+  box-shadow: 0 0 15px rgba(238, 218, 174, 0.5);
+}
+
+.contact__input::placeholder,
+.contact__textarea::placeholder {
+  color: var(--color-text);
+  opacity: 0.5;
+  font-size: 22px;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.contact__input:focus::placeholder,
+.contact__textarea:focus::placeholder {
+  opacity: 0.3;
+  transform: translateX(5px);
+}
+
+@keyframes contactTitleAppear {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contactFieldAppear {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contactButtonAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contactTitleGlitch {
+  0% {
+    transform: translateX(0);
+  }
+
+  30% {
+    transform: translateX(4px);
+  }
+
+  60% {
+    transform: translateX(-4px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes contactButtonGlitch {
+  0% {
+    transform: translateY(-5px) translateX(0);
+  }
+
+  30% {
+    transform: translateY(-5px) translateX(3px);
+  }
+
+  60% {
+    transform: translateY(-5px) translateX(-3px);
+  }
+
+  100% {
+    transform: translateY(-5px) translateX(0);
+  }
+}

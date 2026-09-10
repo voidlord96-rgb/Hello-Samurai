@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Electroharmonix";
+  src: url(../src/components/fonts/electroharmonix.ttf) format("truetype");
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Electroharmonix";
+}
+
+:root {
+  --color-nav-heading: #343434;
+  --color-accent-list: #e13a4b;
+  --color-highlight: #eedaae;
+  --color-project-text: #202147;
+  --color-text: #ffffff;
+  --color-contacts-heading: #313369;
+  --color-input-bg: #eacd8d;
+}
+
+html {
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 3.22rem;
+}
+
+h2 {
+  font-size: 3.06rem;
+}
+
+h3 {
+  font-size: 1.89rem;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}

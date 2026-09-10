@@ -1,0 +1,152 @@
+.project {
+  background: url("../img/3_section.png") top/cover no-repeat;
+  padding: 142px 0 86px 0;
+  height: 150vh;
+}
+
+.project__title {
+  text-align: center;
+  color: var(--color-project-text);
+}
+
+.project__container {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 180px;
+}
+
+.project__subtitle {
+  color: var(--color-accent-list);
+  text-align: center;
+  position: relative;
+  top: 9px;
+
+  transition:
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+.project__subtitle::before {
+  content: url("../img/Group 2.svg");
+  position: absolute;
+  transform: translateX(-100px);
+}
+
+.project__subtitle::after {
+  content: url("../img/Group 3.png");
+  position: absolute;
+  transform: translateX(20px);
+}
+
+.project__subtitle:hover {
+  transform: translateX(5px);
+  text-shadow: 0 0 10px currentColor;
+  animation: titleGlitch 0.3s ease;
+}
+
+.project__content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 98px;
+}
+
+.project__image-wrapper {
+  position: relative;
+  width: 22%;
+  height: 22%;
+  margin-left: 100px;
+}
+
+.project__image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
+
+.project__image-wrapper:hover .project__image {
+  transform: scale(1.05);
+  filter: brightness(0.75);
+  animation: projectGlitch 0.3s ease;
+}
+
+.project__description {
+  width: 60%;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.project__content:hover .project__description {
+  transform: translateX(5px);
+  opacity: 0.9;
+}
+
+.project__link {
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+
+  transform: translate(-50%, 20px);
+
+  color: var(--color-text);
+  text-decoration: none;
+  white-space: nowrap;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+.project__image-wrapper:hover .project__link {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  text-shadow: 0 0 10px currentColor;
+}
+
+.project__link:hover {
+  text-shadow: 0 0 15px currentColor;
+}
+
+@keyframes projectGlitch {
+  0% {
+    transform: scale(1.05) translate(0);
+  }
+
+  30% {
+    transform: scale(1.05) translate(3px, -2px);
+  }
+
+  60% {
+    transform: scale(1.05) translate(-3px, 2px);
+  }
+
+  100% {
+    transform: scale(1.05) translate(0);
+  }
+}
+
+@keyframes titleGlitch {
+  0% {
+    transform: translateX(5px);
+  }
+
+  30% {
+    transform: translateX(8px);
+  }
+
+  60% {
+    transform: translateX(2px);
+  }
+
+  100% {
+    transform: translateX(5px);
+  }
+}

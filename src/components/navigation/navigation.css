@@ -1,0 +1,29 @@
+.nav {
+  background: none;
+  padding-top: 54px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;;
+}
+
+.nav__list {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.nav__link {
+  font-size: 34px;
+  color: #343434;
+  text-decoration: none;
+  margin-left: 72px;
+}
+
+.nav__link--active {
+  border-bottom: 3px solid #E13A4B;
+  padding-bottom: 5px;
+}
